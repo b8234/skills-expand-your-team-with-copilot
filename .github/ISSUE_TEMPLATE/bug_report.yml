@@ -1,0 +1,106 @@
+name: 🐛 Bug Report
+description: Report a problem with existing functionality in the High School Management System
+title: "[BUG] "
+labels: ["bug"]
+assignees: ["Copilot"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the information below to help us understand and fix the issue quickly.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: A clear and concise description of what the bug is
+      placeholder: "Example: Login page shows error message even with correct credentials"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: Current Behavior
+      description: What is currently happening that shouldn't be?
+      placeholder: "Describe exactly what you're seeing..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: "Describe what you expected to happen..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Please provide step-by-step instructions to reproduce the bug
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Enter '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_area
+    attributes:
+      label: Affected Area
+      description: Which part of the system is affected?
+      options:
+        - Login/Authentication
+        - Activity Registration
+        - User Interface/Design
+        - Data Display
+        - Navigation
+        - Other (specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How critical is this issue?
+      options:
+        - Low - Minor inconvenience
+        - Medium - Affects some functionality
+        - High - Blocks important tasks
+        - Critical - System unusable
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_solution
+    attributes:
+      label: Suggested Solution (Optional)
+      description: If you have ideas on how to fix this bug, please share them
+      placeholder: "Example: Check the login validation logic, or update error handling for..."
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here (screenshots, error messages, etc.)
+      placeholder: "Include any error messages, screenshots, or additional details..."
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this bug is fixed?
+      options:
+        - label: The reported error/unexpected behavior no longer occurs
+          required: true
+        - label: The system behaves as described in "Expected Behavior"
+          required: true
+        - label: No new bugs are introduced by the fix
+          required: true

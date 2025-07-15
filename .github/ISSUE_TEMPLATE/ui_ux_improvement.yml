@@ -1,0 +1,134 @@
+name: 🎨 UI/UX Improvement
+description: Request improvements to the user interface or user experience
+title: "[UI/UX] "
+labels: ["enhancement", "ui/ux"]
+assignees: ["Copilot"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Want to improve how the system looks or feels? Please describe your UI/UX improvement idea below.
+
+  - type: input
+    id: improvement_title
+    attributes:
+      label: UI/UX Improvement Title
+      description: Brief description of the UI/UX improvement
+      placeholder: "Example: Improve activity card design"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement_type
+    attributes:
+      label: Type of Improvement
+      description: What aspect of UI/UX needs improvement?
+      options:
+        - Visual Design (colors, fonts, styling)
+        - Layout/Structure
+        - User Flow/Navigation
+        - Accessibility
+        - Mobile Responsiveness
+        - Interactive Elements (buttons, forms)
+        - Overall User Experience
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_experience
+    attributes:
+      label: Current User Experience
+      description: Describe the current UI/UX and what problems users are experiencing
+      placeholder: "Describe what users currently see and any issues they face..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired_experience
+    attributes:
+      label: Desired User Experience
+      description: Describe how you want the UI/UX to look and feel instead
+      placeholder: "Describe the improved experience you envision..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected_pages
+    attributes:
+      label: Affected Pages/Areas
+      description: Which pages or areas of the system should be improved?
+      options:
+        - Homepage/Landing Page
+        - Activity List/Browse Page
+        - Activity Detail Pages
+        - Login/Registration
+        - Navigation/Header
+        - Overall Site Theme
+        - Multiple Pages
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_pain_points
+    attributes:
+      label: User Pain Points
+      description: What specific problems do users face with the current design?
+      placeholder: "Example: Hard to read text, buttons are too small, confusing navigation..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: design_suggestions
+    attributes:
+      label: Design Suggestions
+      description: Any specific design ideas, color schemes, or inspiration sources?
+      placeholder: "Include specific colors, layout ideas, references to other sites, etc..."
+
+  - type: dropdown
+    id: target_users
+    attributes:
+      label: Primary Users Affected
+      description: Who would benefit most from this UI/UX improvement?
+      options:
+        - Students
+        - Teachers/Administrators
+        - Both Students and Teachers
+        - All Users
+    validations:
+      required: true
+
+  - type: textarea
+    id: success_metrics
+    attributes:
+      label: Success Metrics
+      description: How will we know this improvement is successful?
+      placeholder: "Example: Users can complete tasks faster, fewer clicks needed, improved readability..."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Specific criteria for completing this UI/UX improvement
+      options:
+        - label: Visual improvements are implemented as described
+          required: true
+        - label: User experience flows smoothly without confusion
+          required: true
+        - label: Design is consistent across all affected pages
+          required: true
+        - label: Improvement works well on both desktop and mobile
+          required: true
+        - label: Accessibility standards are maintained or improved
+          required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Include mockups, screenshots, or additional design context
+      placeholder: "Attach mockups, reference images, or provide additional design details..."
