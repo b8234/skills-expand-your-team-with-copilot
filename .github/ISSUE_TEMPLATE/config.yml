@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🤔 General Questions
+    url: https://github.com/b8234/skills-expand-your-team-with-copilot/discussions
+    about: Ask questions and discuss ideas with the community
+  - name: 📖 GitHub Skills Documentation
+    url: https://skills.github.com/
+    about: Learn more about GitHub Skills and coding with Copilot

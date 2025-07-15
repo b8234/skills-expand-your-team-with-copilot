@@ -1,0 +1,135 @@
+name: 📚 Documentation Update
+description: Request updates or improvements to documentation, help text, or instructional content
+title: "[DOCS] "
+labels: ["documentation"]
+assignees: ["Copilot"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need to improve documentation or help content? Please provide details about what needs to be updated.
+
+  - type: input
+    id: doc_title
+    attributes:
+      label: Documentation Update Title
+      description: Brief description of what documentation needs attention
+      placeholder: "Example: Add help text for activity registration"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: doc_type
+    attributes:
+      label: Type of Documentation
+      description: What type of documentation needs updating?
+      options:
+        - User Help/Instructions
+        - Developer Documentation
+        - API Documentation
+        - Setup/Installation Guide
+        - Feature Documentation
+        - Error Message Help
+        - FAQ/Troubleshooting
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_documentation
+    attributes:
+      label: Current Documentation State
+      description: What documentation currently exists (if any) and what's wrong with it?
+      placeholder: "Describe current docs, or note if documentation is missing entirely..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: needed_documentation
+    attributes:
+      label: Needed Documentation
+      description: What documentation needs to be created or updated?
+      placeholder: "Describe what information users need to know..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: target_audience
+    attributes:
+      label: Target Audience
+      description: Who is the primary audience for this documentation?
+      options:
+        - Students
+        - Teachers/Administrators
+        - System Administrators
+        - Developers
+        - All Users
+        - Mixed Audience
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_scenarios
+    attributes:
+      label: User Scenarios
+      description: What situations or tasks does this documentation need to address?
+      placeholder: "Example: First-time users registering for activities, teachers managing enrollment..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: documentation_location
+    attributes:
+      label: Documentation Location
+      description: Where should this documentation be placed?
+      options:
+        - In-app help text/tooltips
+        - README files
+        - Separate documentation site
+        - Help section within app
+        - Error/confirmation messages
+        - Code comments
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: key_information
+    attributes:
+      label: Key Information to Include
+      description: What specific information must be covered in this documentation?
+      placeholder: "List the key points, steps, or concepts that must be documented..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: style_and_format_hints
+    attributes:
+      label: Style and Format Suggestions (Optional)
+      description: Any suggestions for how this documentation should be structured or formatted
+      placeholder: "Example: Use step-by-step format, include screenshots, reference existing docs section..."
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we know this documentation is complete and effective?
+      options:
+        - label: All key information is clearly explained
+          required: true
+        - label: Documentation is written for the target audience level
+          required: true
+        - label: Examples and practical guidance are provided where needed
+          required: true
+        - label: Documentation is easy to find and access
+          required: true
+        - label: Documentation is accurate and up-to-date
+          required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any specific style requirements, examples to include, or additional context
+      placeholder: "Include style guidelines, examples, screenshots, or other helpful context..."

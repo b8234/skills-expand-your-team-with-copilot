@@ -1,0 +1,115 @@
+name: ✨ Feature Request
+description: Request a new feature or enhancement for the High School Management System
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: ["Copilot"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! Please provide detailed information to help us understand and implement your idea.
+
+  - type: input
+    id: feature_title
+    attributes:
+      label: Feature Title
+      description: A clear and concise title for the new feature
+      placeholder: "Example: Add dark mode toggle"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem_description
+    attributes:
+      label: Problem Description
+      description: What problem does this feature solve? What need does it address?
+      placeholder: "Describe the current problem or limitation that this feature would solve..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature you'd like to see implemented
+      placeholder: "Describe in detail what you want to happen..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature_area
+    attributes:
+      label: Feature Area
+      description: Which part of the system should this feature be added to?
+      options:
+        - User Interface/Design
+        - Activity Management
+        - User Authentication
+        - Data Display/Filtering
+        - Navigation
+        - Reporting/Analytics
+        - Other (specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user_type
+    attributes:
+      label: Primary Users
+      description: Who would primarily benefit from this feature?
+      options:
+        - Students
+        - Teachers/Administrators
+        - Both Students and Teachers
+        - System Administrators
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: User Story
+      description: Describe this feature from a user's perspective
+      placeholder: "As a [user type], I want [feature] so that [benefit/reason]..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List specific, testable criteria that must be met for this feature to be considered complete
+      placeholder: |
+        - [ ] Criterion 1: [Specific behavior/outcome]
+        - [ ] Criterion 2: [Specific behavior/outcome]
+        - [ ] Criterion 3: [Specific behavior/outcome]
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_hints
+    attributes:
+      label: Technical Hints/Suggestions
+      description: Any technical suggestions, similar features to reference, or implementation ideas
+      placeholder: "Suggest specific UI components, libraries, or implementation approaches..."
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature?
+      options:
+        - Low - Nice to have
+        - Medium - Would improve user experience
+        - High - Important for functionality
+        - Critical - Essential for system use
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Add any other context, mockups, or examples about the feature request
+      placeholder: "Include mockups, screenshots of similar features, or additional details..."

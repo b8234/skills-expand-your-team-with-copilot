@@ -1,0 +1,115 @@
+name: 📝 Content Update
+description: Request updates to text, content, or data in the High School Management System
+title: "[CONTENT] "
+labels: ["content", "enhancement"]
+assignees: ["Copilot"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Need to update content, text, or data in the system? Please provide the details below to ensure accurate changes.
+
+  - type: input
+    id: content_title
+    attributes:
+      label: Content Update Title
+      description: Brief description of what content needs to be updated
+      placeholder: "Example: Update school name and colors"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content_type
+    attributes:
+      label: Type of Content
+      description: What type of content needs to be updated?
+      options:
+        - Text/Labels
+        - School Information (name, colors, etc.)
+        - Activity Descriptions
+        - User Interface Text
+        - Data/Configuration
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_content
+    attributes:
+      label: Current Content
+      description: What is the current text/content that needs to be changed?
+      placeholder: "Copy and paste the exact current text or describe the current content..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: new_content
+    attributes:
+      label: New Content
+      description: What should the content be changed to?
+      placeholder: "Provide the exact new text or describe the new content..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: location
+    attributes:
+      label: Location in System
+      description: Where in the system is this content located?
+      options:
+        - Homepage/Main Page
+        - Activity List/Cards
+        - Login/Registration Pages
+        - Navigation Menu
+        - Headers/Footers
+        - Configuration/Settings
+        - Multiple Locations
+        - Unknown (need help finding)
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific_location
+    attributes:
+      label: Specific Location Details
+      description: Provide more specific details about where to find this content
+      placeholder: "Example: In the header of the main page, or in the activity card for 'Drama Club'"
+
+  - type: textarea
+    id: reason_for_change
+    attributes:
+      label: Reason for Change
+      description: Why does this content need to be updated?
+      placeholder: "Example: School rebranding, information is outdated, typo correction..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation_hints
+    attributes:
+      label: Implementation Hints (Optional)
+      description: Any suggestions on where to find or how to update this content
+      placeholder: "Example: This text might be in the HTML template files, or in a configuration file..."
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: How will we verify the content has been updated correctly?
+      options:
+        - label: Old content is completely replaced with new content
+          required: true
+        - label: Content appears correctly in all specified locations
+          required: true
+        - label: No spelling or formatting errors in new content
+          required: true
+        - label: Content is consistent with overall system style/tone
+          required: true
+
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context
+      description: Any additional information, style guidelines, or context for this content change
+      placeholder: "Include style guidelines, brand requirements, or any other relevant information..."
